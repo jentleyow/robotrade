@@ -40,7 +40,10 @@ class PaymentHistory extends Component {
             <strong>Payment History</strong>
           </span>
           <div className="row">
-            <div className="col s12">
+            <div
+              className="col s12"
+              style={{ maxHeight: "340px", overflow: "auto" }}
+            >
               {payments ? (
                 <React.Fragment>
                   <PaymentTable payments={arrPayments} />

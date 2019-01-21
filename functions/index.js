@@ -25,7 +25,8 @@ exports.userJoined = functions.auth.user().onCreate(user => {
 //payment
 
 const express = require("express");
-const stripe = require("stripe")("sk_test_YqJrle9UFyLq2kdVdYdTRF1s");
+const config = require("./config");
+const stripe = require("stripe")(config.STRIPE_PRIVATE_KEY);
 const app = express();
 let bodyParser = require("body-parser");
 const cors = require("cors");
@@ -93,7 +94,5 @@ app.post("/charge", (req, res) => {
   }
 });
 
-app.get("/charge", (req, res) => {
-  res.send("Test");
-});
+app.get("/charge", (req, res) => {});
 exports.stripe = functions.https.onRequest(app);

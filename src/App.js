@@ -8,6 +8,7 @@ import SignIn from "./components/auth/SignIn";
 import Dashboard from "./components/dashboard/Dashboard";
 import MakePayment from "./components/payment/MakePayment";
 import EditProfile from "./components/editProfile/EditProfile";
+import Page404 from "./components/front/Page404";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/makepayment" component={MakePayment} />
             <Route exact path="/editprofile" component={EditProfile} />
+            <Route component={Page404} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -5,7 +5,6 @@ const PaymentTable = ({ payments }) => {
     <table style={{ tableLayout: "fixed" }} className={styles["paymentTable"]}>
       <tbody>
         {payments.map(payment => {
-          console.log(payment.approve);
           return (
             <tr key={payment.paymentid}>
               <td>
