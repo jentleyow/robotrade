@@ -1,20 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { signOut } from "../../store/actions/authActions";
-
+import { signOut } from "../../../store/actions/adminActions";
 const SignedInLinks = props => {
   return (
     <React.Fragment>
       <ul className="right hide-on-med-and-down">
         <li>
-          <NavLink to="/makepayment">Make Payment</NavLink>
+          <NavLink to="/makepayment">Test</NavLink>
         </li>
         <li>
-          <NavLink to="/support">Contact Support</NavLink>
-        </li>
-        <li>
-          <a onClick={props.signOut}>Log Off</a>
+          <a onClick={props.signOut} className="center">
+            Log Off
+          </a>
         </li>
       </ul>
       <ul className="sidenav" id="mobile-menu">
@@ -27,15 +25,9 @@ const SignedInLinks = props => {
         <li>
           <div className="divider" />
         </li>
-
         <li>
           <NavLink to="/makepayment" className="center">
-            Make Payment
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/support" className="center">
-            Contact Support
+            Test
           </NavLink>
         </li>
         <li>
