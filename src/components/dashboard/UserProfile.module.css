@@ -1,0 +1,11 @@
+.profile-td {
+  text-align: center;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+.profile-td a:hover {
+  text-decoration: underline;
+}
+.profile-td small {
+  line-height: 10px;
+}

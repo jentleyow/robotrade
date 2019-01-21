@@ -1,0 +1,12 @@
+.paymentTable {
+  margin-bottom: 20px;
+}
+.paymentTable th {
+  text-align: center;
+  font-weight: bold;
+}
+.paymentTable td {
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 30px;
+}

@@ -1,0 +1,8 @@
+.middle {
+  background: url("/img/trading.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.middle-container {
+  border: 1px black border;
+}
