@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { compose } from "redux";
 import { Redirect } from "react-router-dom";
+import { firestoreConnect } from "react-redux-firebase";
+import AllInfo from "./AllInfo";
+import AllUsers from "./AllUsers";
 class Dashboard extends Component {
   render() {
     const { auth, adminLogin } = this.props;
@@ -9,7 +13,16 @@ class Dashboard extends Component {
       //For development only
       //return <Redirect to="/admin/login" />;
     }
-    return <div>Dashboard</div>;
+
+    return (
+      <div>
+        <h3 className="center">
+          <div className="row ">
+            <AllUsers />
+          </div>
+        </h3>
+      </div>
+    );
   }
 }
 const mapStateToProps = state => {
@@ -21,7 +34,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {};
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
 )(Dashboard);

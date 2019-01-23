@@ -47,3 +47,37 @@ export const signOut = () => {
       });
   };
 };
+export const getUserInfo = id => {
+  return (dispatch, getState, { getFirestore }) => {
+    const firestore = getFirestore();
+    let user = [];
+    firestore
+      .collection("users")
+      .doc(id)
+      .get()
+      .then(res => {
+        user = res.data();
+        firestore
+          .collection("users")
+          .doc(id)
+          .collection("payments")
+          .get()
+          .then(result => {
+            let payments = [];
+            let no = 1;
+            result.docs.map(re => {
+              payments.push({ no: no, id: re.id, ...re.data() });
+              no++;
+            });
+            user.payments = payments;
+            dispatch({ type: "GET_USERINFO", user: user });
+          })
+          .catch(() => {
+            dispatch({ type: "GET_USERINFO_ERROR" });
+          });
+      })
+      .catch(() => {
+        dispatch({ type: "GET_USERINFO_ERROR" });
+      });
+  };
+};

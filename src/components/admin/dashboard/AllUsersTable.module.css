@@ -1,0 +1,9 @@
+.Collapsible {
+  background-color: blue;
+}
+.userCollapsible {
+  border: 1px solid black;
+}
+.userCollapsible .Collapsible__trigger {
+  border: 1px solid black;
+}

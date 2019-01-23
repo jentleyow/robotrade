@@ -44,7 +44,11 @@ class App extends Component {
               path="/admin/dashboard"
               render={props => <AdminContainer type="dashboard" />}
             />
-            <Route component={DefaultContainer} type="login" />
+            <Route
+              path="/admin/user/:id"
+              render={props => <AdminContainer {...props} type="user" />}
+            />
+            <Route component={DefaultContainer} />
           </Switch>
         </div>
       </BrowserRouter>

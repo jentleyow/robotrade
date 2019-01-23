@@ -7,9 +7,6 @@ const SignedInLinks = props => {
     <React.Fragment>
       <ul className="right hide-on-med-and-down">
         <li>
-          <NavLink to="/makepayment">Test</NavLink>
-        </li>
-        <li>
           <a onClick={props.signOut} className="center">
             Log Off
           </a>
@@ -18,18 +15,14 @@ const SignedInLinks = props => {
       <ul className="sidenav" id="mobile-menu">
         <li>
           <a className="subheader center">
-            <h5 style={{ marginTop: "100px" }}>ROBO-TRADE</h5>
+            <h5 style={{ marginTop: "100px" }}>ADMIN PANEL</h5>
           </a>
         </li>
 
         <li>
           <div className="divider" />
         </li>
-        <li>
-          <NavLink to="/makepayment" className="center">
-            Test
-          </NavLink>
-        </li>
+        <li />
         <li>
           <a onClick={props.signOut} className="center">
             Log Off

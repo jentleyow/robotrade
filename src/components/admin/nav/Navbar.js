@@ -19,7 +19,7 @@ class Navbar extends Component {
     return (
       <nav className="nav-wrapper blue darken-4">
         <div className="container">
-          <Link to="/" className="brand-logo">
+          <Link to="/admin/dashboard" className="brand-logo">
             <span style={{ fontWeight: "700" }}>ADMIN PANEL</span>
           </Link>
           <a
